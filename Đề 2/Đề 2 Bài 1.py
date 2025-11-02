@@ -10,4 +10,13 @@ ans = max(primes) if primes else None
 print(f"Số chữ số của {n}: {len(str(n))}")
 print(f"Tổng các chữ số của {n}: {sum(int(ch) for ch in str(n))}")
 print(f"Tổng các số nguyên tố nhỏ hơn {n}: {prime_sum}")
-print(f"Số nguyên tố gần {n} nhất là: {ans}")
+l = n-1 ; u = n+1
+while True:
+    if l >= 2 and isprime(l):
+        print(l)
+        break
+    if isprime(u):
+        print(u)
+        break
+    l-=1
+    u+=1
